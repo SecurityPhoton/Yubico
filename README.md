@@ -1,8 +1,5 @@
 # How to use Yubikey
-
-![Key!](/data/yubikey.jpg "Key")
 <img src="/data/yubikey.jpg" width="100" height="100">
-
 ## General concepts
 
 There is 4 main usage examples of yubikey 5 NFC:
