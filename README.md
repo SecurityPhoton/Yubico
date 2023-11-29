@@ -1,5 +1,6 @@
 # How to use Yubikey
 <img src="/data/yubikey.jpg" width="100" height="100">
+
 ## General concepts
 
 There is 4 main usage examples of yubikey 5 NFC:
@@ -8,7 +9,7 @@ There is 4 main usage examples of yubikey 5 NFC:
 - PIV (Personal Identity Verification) and in the context of YubiKey, it refers to a smart card-based specification used for secure authentication and digital signatures.
 - GPG (GNU Privacy Guard) refers to the capability of YubiKey devices to support GPG for secure encryption, digital signatures, and managing cryptographic keys.
 
-## PINs and PUK & Key
+### PINs and PUK & Key
 
 YubiKey 5 series devices support several types of PINs (Personal Identification Numbers) and it is important to understand the concept of it before you use the key. Here are the main types of PINs supported by YubiKey 5:
 
@@ -41,7 +42,7 @@ YubiKey 5 series devices support several types of PINs (Personal Identification 
 
 <mark>You must set your own PINs and PUK before use! Change the default!</mark>
 
-## Yubico software overview 
+### Yubico software overview 
 
 **YubiKey minidriver**
 
