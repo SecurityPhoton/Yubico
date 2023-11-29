@@ -1,5 +1,7 @@
 # How to use Yubikey
 
+![Key!](/data/yubikey.jpg "Key")
+
 ## General concepts
 
 There is 4 main usage examples of yubikey 5 NFC:
