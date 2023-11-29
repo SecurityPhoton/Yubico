@@ -1,6 +1,7 @@
 # How to use Yubikey
 
 ![Key!](/data/yubikey.jpg "Key")
+<img src="image.png" width="200" height="100">
 
 ## General concepts
 
