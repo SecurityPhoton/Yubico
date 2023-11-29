@@ -106,7 +106,7 @@ This command uses openssl to extract the public key from the X.509 certificate s
 `ssh-keygen -i -m pkcs8 -f ./my-public-key.pem > id_for_your_yubikey_cert.pub`
 
 Next ssh-keygen is used to convert the extracted public key (my-public-key.pem) into an OpenSSH public key format *(id_for_your_yubikey_cert.pub)* that can be used with SSH. The *-i* flag specifies that the input file is in SSH2-compatible format. *-m pkcs8* specifies the format for the key to import/export as PKCS#8. 
-> PKCS#8 stands for Public-Key Cryptography Standards #8. It's a standard syntax used for storing and exchanging private key information ?in a secure manner, defined in the PKCS series by RSA Laboratories
+> PKCS#8 stands for Public-Key Cryptography Standards #8. It's a standard syntax used for storing and exchanging private key information in a secure manner, defined in the PKCS series by RSA Laboratories
 
 The output of this conversion is redirected *(>)* and saved to a file named *id_for_your_yubikey_cert.pub*.
 
@@ -118,5 +118,7 @@ The output of this conversion is redirected *(>)* and saved to a file named *id_
 `'PKCS11Provider "C:\Program Files\Yubico\Yubico PIV Tool\bin\libykcs11.dll"'`
 to allow OpenSSH use the physical keys like Yubikey is.
 5. Just open Terminal and do ssh to server providing your pin.
+
+> PKCS#11 also known as Cryptographic Token Interface Standard is a widely-used, platform-independent API standard that defines functions and data structures for interacting with cryptographic tokens, such as hardware security modules (HSMs), smart cards, and USB tokens.
 
 Unfortunaly not all SSH windows programs work with PKCS11 so you cannot use them with key - so it may be unconvienent in some cases.
