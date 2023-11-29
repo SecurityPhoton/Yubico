@@ -12,28 +12,28 @@ There is 4 main usage examples of yubikey 5 NFC:
 
 YubiKey 5 series devices support several types of PINs (Personal Identification Numbers) and it is important to understand the concept of it before you use the key. Here are the main types of PINs supported by YubiKey 5:
 
-- User PIN (Personal Identification Number):
+- **User PIN** (Personal Identification Number):
             The User PIN is a mandatory PIN required to unlock the YubiKey and access its features. It protects the private keys stored on the device.
             This PIN is typically required when using the YubiKey for authentication, digital signatures, or encryption.
         It's essential to remember that the User PIN should be strong and kept confidential to prevent unauthorized access.
 
         Default: 123456
 
-- Admin PIN:
+- **Admin PIN**:
             The Admin PIN provides administrative control over the YubiKey's settings and configurations.
             It's used to change certain settings, reset the User PIN, and perform administrative tasks on the device.
             The Admin PIN provides higher-level access than the User PIN and should be kept confidential as well.
 
         Default: 12345678
 
-- PUK (PIN Unblocking Key):
+- **PUK** (PIN Unblocking Key):
             The PUK is used to unblock or reset the User PIN in case it's forgotten or entered incorrectly multiple times, leading to PIN lockout.
             It's a backup mechanism to regain access to the YubiKey by resetting the User PIN.
             The PUK is not intended for regular use and should be stored securely, as it allows resetting the User PIN and gaining access to the YubiKey.
 
         Default: Serial number of your Key - XXXXXXXX
 
-- Management Key (MGM Key):
+- **Management Key** (MGM Key):
             The Management Key (also referred to as the MGM Key) is used for managing some specific features and settings on the YubiKey.
             It's used for certain YubiKey configurations and is less commonly used than the User and Admin PINs.
 
