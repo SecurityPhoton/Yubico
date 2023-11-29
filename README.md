@@ -44,8 +44,9 @@ YubiKey 5 series devices support several types of PINs (Personal Identification 
 ## Yubico software overview 
 
 **YubiKey minidriver**
+
 The YubiKey Minidriver is a component designed to enable smart card functionality on Windows systems while using a YubiKey. It extends the capabilities of the YubiKey smart card functionality to work seamlessly within the Windows ecosystem, providing enhanced security features and allowing YubiKeys to be used as smart cards for authentication and cryptographic operations.
-You need to install it on Windows systems for using your key. You can use this guide https://support.yubico.com/hc/en-us/articles/360015654560#Manual-Install
+You need to install it on Windows systems for using your key. You can use this [guide](https://support.yubico.com/hc/en-us/articles/360015654560#Manual-Install)
 
 **NB!** When deploying the Minidriver to remote servers <mark>where the YubiKey cannot be physically inserted</mark>, a legacy node must be created to load the minidriver. To do so, install the minidriver with the INSTALL_LEGACY_NODE=1 option set:
 
