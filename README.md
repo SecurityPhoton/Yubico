@@ -92,10 +92,10 @@ This software enables users to log in to Windows computers using a YubiKey for t
 - generate on your PC and later import to your Yubikey (if you need your privatekey elsewhere)
 - generate key&cert on Yubikey directly with a secure option not to share private key as it`s cannot be exported. For this task you can use gui or cli YubiKey Manager.
 
-2. Second you have to export your public key and do some crypto magic to make it suitable for SSH server systems file .ssh\authorized_keys. The trick is that use must use the physical linux host where you can insert key. 
+2. Second you have to export your public key and do some crypto magic to make it suitable for SSH server systems file .ssh\authorized_keys. The trick is that use must use the physical linux host where you can insert key or just virtual box vm on linux host with key attached (I did not tested on WSL - but it also can do the trick). 
 General steps are (use [this](https://gist.github.com/shanewholloway/15a0f5dda96b5d328d121f255f012ebf) GIST and make shell script):
 
-`ykman piv export-certificate 9a my-public-certificate.pem`
+`ykman piv certificates export 9a my-public-certificate.pem`
 
 Using ykman, the YubiKey Manager Command Line Interface (CLI), to export a certificate from slot 9a on the YubiKey with PIV (Personal Identity Verification) functionality. It exports the certificate and saves it to a file named my-public-certificate.pem.
 
