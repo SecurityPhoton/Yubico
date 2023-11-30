@@ -60,6 +60,7 @@ Installing the MSI with the Legacy Node option enabled on servers will prevent t
 **YubiKey Manager:**
 
 YubiKey Manager is a desktop application available for Windows, macOS, and Linux. It provides a graphical interface for managing and configuring YubiKeys, including settings for PINs, applications, and more. Users can perform tasks like changing PINs, enabling or disabling YubiKey functionalities, and configuring slot configurations with GUI.
+The guide for instalation can be found [here](https://docs.yubico.com/software/yubikey/tools/ykman/Install_ykman.html#third-party-linux-distributions)
 
 ---
 
