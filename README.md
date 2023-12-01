@@ -3,6 +3,9 @@
 
 - [General concepts](#general-concepts)
   - [PINs PUK Key](#pins-puk-key)
+  - [Yubico software overview](#yubico-software-overview)
+- [Usage examples](#usage-examples)
+  - [Using Yubikey for auth on remote SSH servers on Windows](#using-yubikey-for-auth-on-remote-ssh-servers-on-windows)
 
 ## General concepts
 
@@ -90,8 +93,8 @@ https://developers.yubico.com/yubikey-manager/
 
 This software enables users to log in to Windows computers using a YubiKey for two-factor authentication.
 
-## Usage exaples 
-### Example 1: Using Yubikey for auth on remote SSH servers on Windows
+## Usage examples 
+### Using Yubikey for auth on remote SSH servers on Windows
 1. First step is to generate the key and a certificate. This is where you have 2 options:
 - generate on your PC and later import to your Yubikey (if you need your privatekey elsewhere)
 - generate key&cert on Yubikey directly with a secure option not to share private key as it`s cannot be exported. For this task you can use gui or cli YubiKey Manager.
