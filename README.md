@@ -2,7 +2,7 @@
 <img src="/data/yubikey.jpg" width="100" height="100">
 
 - [General concepts](#General-concepts)
-  - [PINs and PUK & Key](###PINs,-PUK-&-Key)
+  - [PINs and PUK & Key](#PINs,-PUK-&-Key)
 
 ## General concepts
 
