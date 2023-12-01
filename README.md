@@ -7,7 +7,7 @@ There is 4 main usage examples of yubikey 5 NFC:
 - OTP
 - FIDO2
 - PIV (Personal Identity Verification) and in the context of YubiKey, it refers to a smart card-based specification used for secure authentication and digital signatures.
-- GPG (GNU Privacy Guard) refers to the capability of YubiKey devices to support GPG for secure encryption, digital signatures, and managing cryptographic keys.
+- GPG (GNU Privacy Guard) refers to the capability of YubiKey devices to support GPG for secure encryption, digital signatures, and managing cryptographic keys. [This link](https://github.com/drduh/YubiKey-Guide) provides much more usage info.
 
 ### PINs and PUK & Key
 
@@ -122,4 +122,4 @@ to allow OpenSSH use the physical keys like Yubikey is.
 
 > PKCS#11 also known as Cryptographic Token Interface Standard is a widely-used, platform-independent API standard that defines functions and data structures for interacting with cryptographic tokens, such as hardware security modules (HSMs), smart cards, and USB tokens.
 
-Unfortunaly not all SSH windows programs work with PKCS11 so you cannot use them with key - so it may be unconvienent in some cases.
+Unfortunaly not all SSH windows programs work with PKCS11 and you cannot use them with key - so it may be unconvienent in some cases.
