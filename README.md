@@ -1,6 +1,9 @@
 # How to use Yubikey
 <img src="/data/yubikey.jpg" width="100" height="100">
 
+- [General concepts](#General-concepts)
+  - [PINs and PUK & Key](#PINs-and-PUK-&-Key)
+
 ## General concepts
 
 There is 4 main usage examples of yubikey 5 NFC:
