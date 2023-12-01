@@ -98,15 +98,15 @@ General steps are (use [this](https://gist.github.com/shanewholloway/15a0f5dda96
 
 `ykman piv certificates export 9a my-public-certificate.pem`
 
-Using ykman, the YubiKey Manager Command Line Interface (CLI), to export a certificate from slot 9a on the YubiKey with PIV (Personal Identity Verification) functionality. It exports the certificate and saves it to a file named my-public-certificate.pem.
+            Using ykman, the YubiKey Manager Command Line Interface (CLI), to export a certificate from slot 9a on the YubiKey with PIV (Personal Identity Verification) functionality. It exports the certificate               and saves it to a file named my-public-certificate.pem.
 
 `openssl x509 -in my-public-certificate.pem -noout -pubkey > my-public-key.pem`
 
-This command uses openssl to extract the public key from the X.509 certificate stored in the file *my-public-certificate.pem*. The *-noout* flag indicates that no certificate output should be printed, and *-pubkey* specifies to output the public key only. The extracted public key is then redirected *(>)* and saved to a file named *my-public-key.pem*.
+            This command uses openssl to extract the public key from the X.509 certificate stored in the file *my-public-certificate.pem*. The *-noout* flag indicates that no certificate output should be printed,             and *-pubkey* specifies to output the public key only. The extracted public key is then redirected *(>)* and saved to a file named *my-public-key.pem*.
 
 `ssh-keygen -i -m pkcs8 -f ./my-public-key.pem > id_for_your_yubikey_cert.pub`
 
-Next ssh-keygen is used to convert the extracted public key (my-public-key.pem) into an OpenSSH public key format *(id_for_your_yubikey_cert.pub)* that can be used with SSH. The *-i* flag specifies that the input file is in SSH2-compatible format. *-m pkcs8* specifies the format for the key to import/export as PKCS#8. 
+            Next ssh-keygen is used to convert the extracted public key (my-public-key.pem) into an OpenSSH public key format *(id_for_your_yubikey_cert.pub)* that can be used with SSH. The *-i* flag specifies                that the input file is in SSH2-compatible format. *-m pkcs8* specifies the format for the key to import/export as PKCS#8. 
 > PKCS#8 stands for Public-Key Cryptography Standards #8. It's a standard syntax used for storing and exchanging private key information in a secure manner, defined in the PKCS series by RSA Laboratories
 
 The output of this conversion is redirected *(>)* and saved to a file named *id_for_your_yubikey_cert.pub*.
