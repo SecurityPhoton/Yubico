@@ -47,6 +47,7 @@ YubiKey 5 series devices support several types of PINs (Personal Identification 
         Default: 010203040506070801020304050607080102030405060708
 
 <mark>You must set your own PINs and PUK before use! Change the default!</mark>
+<mark>This is important to understand that OTP, FIDO2, GPG each have own individual PIN! [Read this for consulting details.](https://support.yubico.com/hc/en-us/articles/4402836718866-Understanding-YubiKey-PINs) </mark>
 
 ### Yubico software overview 
 
