@@ -2,7 +2,7 @@
 <img src="/data/yubikey.jpg" width="100" height="100">
 
 - [General concepts](#general-concepts)
-  - [PINs PUK Key](#pins-puk-key)
+  - [PINs PUK Keys types](#pins-puk-key)
   - [Yubico software overview](#yubico-software-overview)
 - [Usage examples](#usage-examples)
   - [Using Yubikey for auth on remote SSH servers on Windows](#using-yubikey-for-auth-on-remote-ssh-servers-on-windows)
@@ -15,9 +15,12 @@ There is 4 main usage examples of yubikey 5 NFC:
 - PIV (Personal Identity Verification) and in the context of YubiKey, it refers to a smart card-based specification used for secure authentication and digital signatures.
 - GPG (GNU Privacy Guard) refers to the capability of YubiKey devices to support GPG for secure encryption, digital signatures, and managing cryptographic keys. [This link](https://github.com/drduh/YubiKey-Guide) provides much more usage info.
 
-### PINs PUK Key
+### PINs PUK Keys types
 
 YubiKey 5 series devices support several types of PINs (Personal Identification Numbers) and it is important to understand the concept of it before you use the key. Here are the main types of PINs supported by YubiKey 5:
+>**This is important to understand that PIV, FIDO2, GPG each have own individual PIN! Read [this](https://support.yubico.com/hc/en-us/articles/4402836718866-Understanding-YubiKey-PINs) for more details.**
+
+
 
 - **User PIN** (Personal Identification Number):
             The User PIN is a mandatory PIN required to unlock the YubiKey and access its features. It protects the private keys stored on the device.
@@ -47,7 +50,13 @@ YubiKey 5 series devices support several types of PINs (Personal Identification 
         Default: 010203040506070801020304050607080102030405060708
 
 >You must set your own PINs and PUK before use! Change the default!
->**This is important to understand that OTP, FIDO2, GPG each have own individual PIN! Read [this](https://support.yubico.com/hc/en-us/articles/4402836718866-Understanding-YubiKey-PINs) for more details.**
+
+| Security Protocol | PIN Usage |
+|-------------------|------------|
+| PIV             | The PIN is required when using the PIV key for signing, encrypting, or authenticating. If the PIN is entered incorrectly too many times, the PIV key can no longer be used until the PIN is reset with PUK. |
+| FIDO2           | The PIN is used for FIDO2 operations. |
+| GPG             | The PINs on the OpenPGP card can be set with GnuPG. The OpenPGP card has a user PIN, an admin PIN, and an optional reset code. The user PIN is required when using the OpenPGP key for signing, encrypting, or authenticating. The admin PIN is required for all OpenPGP related settings, such as transferring OpenPGP keys or setting PIN retries. The reset code can be used to reset the PIN if it is entered incorrectly too many times. |
+
 
 ### Yubico software overview 
 
